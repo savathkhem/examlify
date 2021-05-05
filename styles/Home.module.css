@@ -1,3 +1,10 @@
+.card50 {
+  width: 50vw;
+}
+.col10 {
+  width: 10px;
+}
+
 .container {
   min-height: 100vh;
   padding: 0 0.5rem;

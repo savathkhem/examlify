@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React from 'react';
-import { Button } from 'reactstrap';
+import { Card, CardTitle, CardSubtitle, Row, Table } from 'reactstrap';
 
 export default function Home() {
   return (
@@ -14,7 +14,38 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Button color="danger">Danger!</Button>
+        <Row>
+            <Card body className={styles.card50}>
+              <CardTitle tag="h5">Whats 2 + 2?</CardTitle>
+              <CardSubtitle tag="h6" className="mb-2 text-muted">Choose one</CardSubtitle>
+              <Table hover>
+                <thead>
+                  <tr>
+                    <th className={styles.col10}>#</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">A</th>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">B</th>
+                    <td>4</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">C</th>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">D</th>
+                    <td>3</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </Card>
+        </Row>
       </main>
 
       <footer className={styles.footer}>
