@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React from 'react';
-import { Card, CardTitle, CardSubtitle, Row, Table } from 'reactstrap';
+import { Card, CardTitle, CardSubtitle, Row, Table, Button, Alert, Pagination, PaginationItem, PaginationLink, Progress, Col } from 'reactstrap';
 
 export default function Home() {
   return (
@@ -16,8 +16,8 @@ export default function Home() {
       <main className={styles.main}>
         <Row>
             <Card body className={styles.card50}>
-              <CardTitle tag="h5">Whats 2 + 2?</CardTitle>
-              <CardSubtitle tag="h6" className="mb-2 text-muted">Choose one</CardSubtitle>
+              <CardTitle tag="h5">What is 2 + 2?</CardTitle>
+              <CardSubtitle tag="h6" className="mb-2 text-muted">Choose one:  "A"</CardSubtitle>
               <Table hover>
                 <thead>
                   <tr>
@@ -44,6 +44,60 @@ export default function Home() {
                   </tr>
                 </tbody>
               </Table>
+
+              {/*  Display Correct Answer */}
+              <Alert color="danger">
+                The Correct Answer is "B"
+              </Alert>
+
+              {/* Submit/ */}
+              <Button color="primary">Submit</Button>{' '}
+
+              {/* Card Navigation */}
+              <Row>
+                <Col className={styles.rowTop5}>
+                <Pagination size="lg" aria-label="Page navigation example">
+                  <PaginationItem>
+                    <PaginationLink first href="#" />
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink previous href="#" />
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#">
+                      1
+                    </PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#">
+                      2
+                    </PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#">
+                      3
+                    </PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink next href="#" />
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink last href="#" />
+                  </PaginationItem>
+                </Pagination>
+                </Col>
+              </Row>
+
+              {/* Progress Section */}
+              <Row>
+                <Col className={styles.rowTop5}>
+                  <Progress multi>
+                    <Progress striped bar color="success" value="50" />
+                    <Progress striped bar color="danger" value="20" />
+                  </Progress>
+                </Col>
+              </Row>
+
             </Card>
         </Row>
       </main>
