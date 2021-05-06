@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <Row>
 
-        <Col className={styles.rowTop5}>
+        <Col className={styles.rowTop5>
             <Card body className={styles.card50}>
               <CardTitle tag="h5">{content.pages[0].questions[0].question.title}</CardTitle>
               <CardSubtitle tag="h6" className="mb-2 text-muted">Choose one: </CardSubtitle>

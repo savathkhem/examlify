@@ -1,7 +1,11 @@
 import Head from 'next/head';
 import styles from '../../styles/Home.module.css'
-import { Card, CardTitle, CardSubtitle, Row, Table, Button, Alert, Progress, Col } from 'reactstrap';
+import Question from "../../components/question"
 import content from '../../examlify.content.json';
+
+
+// STATE:
+// NUMBER OF QUESTIONS, CORRECT, INCORRECT, SKIP
 
 
 
@@ -14,20 +18,8 @@ export default function Page({page}) {
         </Head>
         <h1>{page.title}</h1>
         <div>{page.subject}</div>
+        <Question props={page}/>
 
-        {/* MAPPING THROUGH QUESTIONS */}
-        {page.questions.map((q, index) => (
-        <div>
-          <p key={index}>
-            {q.question.title}
-          </p>
-          {q.question.answers.map((a, index) =>(
-            <ul key={index}>
-              {a.answer}
-            </ul>
-          ))}
-        </div>
-        ))}
       </>
   );
 }
