@@ -16,6 +16,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <Row>
+          
+        <Col className={styles.rowTop5}>
             <Card body className={styles.card50}>
               <CardTitle tag="h5">{content.examlify[0].questions[0].question}</CardTitle>
               <CardSubtitle tag="h6" className="mb-2 text-muted">Choose one: </CardSubtitle>
@@ -45,16 +47,56 @@ export default function Home() {
                   </tr>
                 </tbody>
               </Table>
-
               {/*  Display Correct Answer */}
               <Alert color="danger">
                 The Correct Answer is "B"
               </Alert>
-
               {/* Submit/ */}
               <Button color="primary">Submit</Button>{' '}
-
             </Card>
+          </Col>
+
+          <Col className={styles.rowTop5}>
+            <Card body className={styles.card50}>
+              <CardTitle tag="h5">{content.examlify[0].questions[1].question}</CardTitle>
+              <CardSubtitle tag="h6" className="mb-2 text-muted">Choose one: </CardSubtitle>
+              <Table hover>
+                <thead>
+                  <tr>
+                    <th className={styles.col10}>#</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">A</th>
+                    <td>{content.examlify[0].questions[1].answers[0].answer}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">B</th>
+                    <td>{content.examlify[0].questions[1].answers[1].answer}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">C</th>
+                    <td>{content.examlify[0].questions[1].answers[2].answer}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">D</th>
+                    <td>{content.examlify[0].questions[1].answers[3].answer}</td>
+                  </tr>
+                </tbody>
+              </Table>
+              {/*  Display Correct Answer */}
+              <Alert color="danger">
+                The Correct Answer is "B"
+              </Alert>
+              {/* Submit/ */}
+              <Button color="primary">Submit</Button>{' '}
+            </Card>
+          </Col>
+
+
+
         </Row>
       </main>
 
