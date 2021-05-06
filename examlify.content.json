@@ -4,50 +4,80 @@
             "title": "Simple Math",
             "path": "/math",
             "subject": "Mathematics",
-            "author": "Savath",
+            "author": "test",
             "date": "March 5, 2021",
             "questions": [
                 {
-                    "question": "What is 2+2?",
-                    "answers": [
-                        {
-                        "answer": "1",
-                        "truth": false
-                        },
-                        {
-                        "answer": "4",
-                        "truth": true 
-                        },
-                        {
-                        "answer": "2",
-                        "truth": false
-                        },
-                        {
-                        "answer": "3",
-                        "truth": false
-                        }
-                    ]
+                    "title": "test0",
+                    "question": {
+                        "title": "What is 2+2?",
+                        "answers": [
+                            {
+                            "answer": "1",
+                            "truth": false
+                            },
+                            {
+                            "answer": "4",
+                            "truth": true 
+                            },
+                            {
+                            "answer": "2",
+                            "truth": false
+                            },
+                            {
+                            "answer": "3",
+                            "truth": false
+                            }
+                        ]
+                    }
                 },
                 {
-                    "question": "What is 3+2?",
-                    "answers": [
-                        {
-                        "answer": "1",
-                        "truth": false
-                        },
-                        {
-                        "answer": "4",
-                        "truth": false 
-                        },
-                        {
-                        "answer": "5",
-                        "truth": true
-                        },
-                        {
-                        "answer": "3",
-                        "truth": false
-                        }
-                    ]
+                    "title": "test1",
+                    "question": {
+                        "title": "What is 5+2?",
+                        "answers": [
+                            {
+                            "answer": "1",
+                            "truth": false
+                            },
+                            {
+                            "answer": "7",
+                            "truth": true 
+                            },
+                            {
+                            "answer": "2",
+                            "truth": false
+                            },
+                            {
+                            "answer": "3",
+                            "truth": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "title": "test2",
+                    "question": {
+                        "title": "What is 2-2?",
+                        "answers": [
+                            {
+                            "answer": "1",
+                            "truth": false
+                            },
+                            {
+                            "answer": "0",
+                            "truth": true 
+                            },
+                            {
+                            "answer": "2",
+                            "truth": false
+                            },
+                            {
+                            "answer": "3",
+                            "truth": false
+                            }
+                        ]
+                    }
                 }
             ]
         }, 

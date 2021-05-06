@@ -19,7 +19,7 @@ export default function Home() {
 
         <Col className={styles.rowTop5}>
             <Card body className={styles.card50}>
-              <CardTitle tag="h5">{content.pages[0].questions[0].question}</CardTitle>
+              <CardTitle tag="h5">{content.pages[0].questions[0].question.title}</CardTitle>
               <CardSubtitle tag="h6" className="mb-2 text-muted">Choose one: </CardSubtitle>
               <Table hover>
                 <thead>
@@ -31,19 +31,19 @@ export default function Home() {
                 <tbody>
                   <tr>
                     <th scope="row">A</th>
-                    <td>{content.pages[0].questions[0].answers[0].answer}</td>
+                    <td>{content.pages[0].questions[0].question[0].answers[0].answer}</td>
                   </tr>
                   <tr>
                     <th scope="row">B</th>
-                    <td>{content.pages[0].questions[0].answers[1].answer}</td>
+                    <td>{content.pages[0].questions[0].question[0].answers[1].answer}</td>
                   </tr>
                   <tr>
                     <th scope="row">C</th>
-                    <td>{content.pages[0].questions[0].answers[2].answer}</td>
+                    <td>{content.pages[0].questions[0].question[0].answers[2].answer}</td>
                   </tr>
                   <tr>
                     <th scope="row">D</th>
-                    <td>{content.pages[0].questions[0].answers[3].answer}</td>
+                    <td>{content.pages[0].questions[0].question[0].answers[3].answer}</td>
                   </tr>
                 </tbody>
               </Table>
