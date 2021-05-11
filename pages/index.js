@@ -1,9 +1,15 @@
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import React from 'react';
-import { Card, CardTitle, CardSubtitle, Row, Table, Button, Alert, Progress, Col } from 'reactstrap';
-import content from "../examlify.content.json";
+import Test from '../components/test'
+import Clock from '../components/clock'
+import Range from '../components/range'
+import Test1 from '../components/test1'
+import UserList from '../components/userList'
+
+// import { Card, CardTitle, CardSubtitle, Row, Table, Button, Alert, Progress, Col } from 'reactstrap';
+
 
 export default function Home() {
   return (
@@ -15,52 +21,26 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Row>
-            <Card body className={styles.card50}>
-              <CardTitle tag="h5">{content.pages[1].questions[0].question}</CardTitle>
-              <CardSubtitle tag="h6" className="mb-2 text-muted">Choose one: </CardSubtitle>
-              <Table hover>
-                <thead>
-                  <tr>
-                    <th className={styles.col10}>#</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">A</th>
-                    <td>{content.pages[1].questions[0].answers[0].answer}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">B</th>
-                    <td>{content.pages[1].questions[0].answers[1].answer}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">C</th>
-                    <td>{content.pages[1].questions[0].answers[2].answer}</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">D</th>
-                    <td>{content.pages[1].questions[0].answers[3].answer}</td>
-                  </tr>
-                </tbody>
-              </Table>
 
-              {/*  Display Correct Answer */}
-              <Alert color="danger">
-                The Correct Answer is "B"
-              </Alert>
+        {/* <Clock />
+        
+        <Test />
 
-              {/* Submit/ */}
-              <Button color="primary">Submit</Button>{' '}
+        <Clock />
 
-            </Card>
-        </Row>
+        <Range /> */}
+
+        {/* <Test1 /> */}
+
+        <UserList />
+
+
+
       </main>
 
       <footer className={styles.footer}>
         {/* Progress Section */}
-        <Col>
+        {/* <Col>
           <Row>
             <Col className={styles.rowTop5}>
               <Progress multi>
@@ -69,7 +49,7 @@ export default function Home() {
               </Progress>
             </Col>
           </Row>
-        </Col>
+        </Col> */}
         {/* <Col>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
