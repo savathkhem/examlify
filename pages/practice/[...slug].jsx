@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-// import styles from '../../styles/Home.module.css'
-import Question from "../../components/question"
+import Questions from "../../components/Questions"
 import content from '../../examlify.content.json';
 
 
 export default function Page({page}) {
-  // Declare a new state variable, which we'll call "count"
-  const [count, setCount] = useState(0);
-  const [fruit, setAnswer] = useState();
+
+
+  // State: Correct = ""
+  // State: Incorrect = ""
+  // State: TotalQuestions = ""
+
+  // const [answerState, setAnswer] = useState("")
+  // const handleClick = (index) => setAnswer(index)
+  const answerArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
   
   return (
     <>
@@ -17,7 +22,10 @@ export default function Page({page}) {
     </Head>
     <h1>{page.title}</h1>
     <div>{page.subject}</div>
-    <Question props={page}/>
+      <Questions 
+      page={page}
+      answerArr={answerArr}
+      />
   </>
   );
 }
