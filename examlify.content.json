@@ -13,19 +13,19 @@
                         "answers": [
                             {
                             "answer": "1",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "4",
-                            "truth": true 
+                            "correct": true 
                             },
                             {
                             "answer": "2",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "3",
-                            "truth": false
+                            "correct": false
                             }
                         ]
                     }
@@ -36,19 +36,19 @@
                         "answers": [
                             {
                             "answer": "1",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "7",
-                            "truth": true 
+                            "correct": true 
                             },
                             {
                             "answer": "2",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "3",
-                            "truth": false
+                            "correct": false
                             }
                         ]
                     }
@@ -59,19 +59,19 @@
                         "answers": [
                             {
                             "answer": "1",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "0",
-                            "truth": true 
+                            "correct": true 
                             },
                             {
                             "answer": "2",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "3",
-                            "truth": false
+                            "correct": false
                             }
                         ]
                     }
@@ -91,19 +91,19 @@
                         "answers": [
                             {
                             "answer": "1",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "820",
-                            "truth": true 
+                            "correct": true 
                             },
                             {
                             "answer": "2",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "3",
-                            "truth": false
+                            "correct": false
                             }
                         ]
                     }
@@ -114,19 +114,19 @@
                         "answers": [
                             {
                             "answer": "1",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "502",
-                            "truth": true 
+                            "correct": true 
                             },
                             {
                             "answer": "2",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "3",
-                            "truth": false
+                            "correct": false
                             }
                         ]
                     }
@@ -137,19 +137,19 @@
                         "answers": [
                             {
                             "answer": "1",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "198",
-                            "truth": true 
+                            "correct": true 
                             },
                             {
                             "answer": "2",
-                            "truth": false
+                            "correct": false
                             },
                             {
                             "answer": "3",
-                            "truth": false
+                            "correct": false
                             }
                         ]
                     }
