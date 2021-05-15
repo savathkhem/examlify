@@ -5,15 +5,6 @@ import content from '../../examlify.content.json';
 
 
 export default function Page({page}) {
-
-
-  // State: Correct = ""
-  // State: Incorrect = ""
-  // State: TotalQuestions = ""
-
-  // const [answerState, setAnswer] = useState("")
-  // const handleClick = (index) => setAnswer(index)
-  const answerArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
   
   return (
     <>
@@ -24,7 +15,6 @@ export default function Page({page}) {
     <div>{page.subject}</div>
       <Questions 
       page={page}
-      answerArr={answerArr}
       />
   </>
   );
