@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css'
 import { Card, CardTitle, CardSubtitle, Row, Table, Button, Alert } from 'reactstrap';
+import QuestionBtn from './QuestionBtn'
 
 
 export default function Question({q, index}) {
@@ -12,8 +13,17 @@ export default function Question({q, index}) {
   const [answerState, setAnswer] = useState('')
   const [answeredState, setAnswered] = useState(true)
   const [correctState, setCorrect] = useState()
-
-
+  const [countState, setCount] = useState(1)
+  
+  
+  useEffect(() => {
+    const correctArr = answers.filter(a => a.correct === true);
+    setCount(correctArr.length)
+    // console.log(countState)
+    console.log(q.question.title+": (Number of Questions " + countState + ")")
+    
+  })
+ 
   const handleClick = (e) => setAnswer(e)
 
   // submit button:  Check if answerState is == true
@@ -35,12 +45,8 @@ export default function Question({q, index}) {
     alerter = <Alert color="success">Correct!</Alert>;
   } 
   if (correctState == false) {
-    alerter = <Alert color="danger">Wrong...  The answer is "XX"</Alert>;;
+    alerter = <Alert color="danger">Wrong</Alert>;;
   }
-
-  let button;
-  
-
 
 
   return (
@@ -50,22 +56,21 @@ export default function Question({q, index}) {
                 <Card body>
 
                   <CardTitle tag="h5" key={index}>{q.question.title}</CardTitle>
-                  <Table hover>
-
-                    {/* <thead>
-                      <tr>
-                        <th className={styles.col10}>#</th>
-                        <th>Description</th>
-                      </tr>
-                    </thead> */}
+                  <Table>
 
                     <tbody>      
                       {answers.map((a, index) =>(
                           <tr>
                             <th scope="row" className={styles.col10}>
 
-                              <Button className={styles.btnRound} outline color="primary" correct={a.correct} onClick={() => handleClick(index)} value={index}>{answerArr[index]}</Button>
-
+                              <QuestionBtn
+                                a={a}
+                                index={index}
+                                handleClick={handleClick}
+                                answeredState={answeredState}
+                                answerArr={answerArr}
+                              />
+                              
                               </th>
                             <td key={index}>{a.answer}</td>
                           </tr>
@@ -77,12 +82,11 @@ export default function Question({q, index}) {
                   {answeredState
                     ? 
                     <>
-                    <CardSubtitle tag="h6" className="mb-2 text-muted">Selected (Choose One): {answerArr[answerState]}</CardSubtitle>
+                    <CardSubtitle tag="h6" className="mb-2 text-muted">Choose {countState}: {answerArr[answerState]}</CardSubtitle>
                     <Button onClick={() => submitClick(answers, answerState)} color="primary">Submit</Button>
                     </>
                     : 
-                    <>
-                    </>
+                    <></>
                   }
                   {alerter}
                 </Card>

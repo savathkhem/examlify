@@ -21,11 +21,11 @@
                             },
                             {
                             "answer": "2",
-                            "correct": false
+                            "correct": true
                             },
                             {
                             "answer": "3",
-                            "correct": false
+                            "correct": true
                             }
                         ]
                     }
