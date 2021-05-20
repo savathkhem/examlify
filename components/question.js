@@ -2,13 +2,18 @@ import React, { useState, useEffect } from 'react';
 import styles from '../styles/Home.module.css'
 import { Card, CardTitle, CardSubtitle, Row, Table, Button, Alert } from 'reactstrap';
 import QuestionBtn from './QuestionBtn'
+import { shufflesourceArray } from '../lib/shuffle'
 
 
 export default function Question({q, index}) {
+
   
   const answerArr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
   const answers = q.question.answers
-
+  
+  // Shuffle Answers
+  // var arr = answers;
+  // shufflesourceArray(answers); 
 
   const [answerState, setAnswer] = useState('')
   const [answeredState, setAnswered] = useState(true)

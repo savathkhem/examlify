@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Questions from "../../components/Questions"
 import content from '../../examlify.content.json';
+import { shufflesourceArray } from '../../lib/shuffle';
 
 
 export default function Page({page}) {
+
+  
+  // Shuffle Questions
+  var arr = page.questions;
+  shufflesourceArray(arr); 
   
   return (
     <>
